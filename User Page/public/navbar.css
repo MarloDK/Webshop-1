@@ -1,0 +1,37 @@
+:root {
+    --link-color: #385af5;
+    --link-color-hover: #5a77fa;
+
+    --border-color: #c7c7c7;
+}
+
+
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#nav-bar {
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+
+    margin-bottom: 5vh;
+}
+
+#searchbar {
+    padding: 2vh 1vw;
+}
+
+#searchbar #seachbar--input {
+    width: 15vw;
+    height: 3vh;
+}
+
+#searchbar #searchbar--submit {
+    width: 5vw;
+    height: 3vh;
+}

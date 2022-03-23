@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Webshop | Products</title>
+
+    <link rel="stylesheet" href="/navbar.css">
+    <link rel="stylesheet" href="/pages/mainpage.css">
+</head>
+<body>
+    <header id="nav-bar">
+        <form id="searchbar" type="POST" action="/products/:someId">
+            <input id="seachbar--input"     type="text" placeholder="Søg blandt vores 20.000 produkter">
+            <input id="searchbar--submit"   type="submit" value="Søg">
+        </form>
+    </header>
+
+    <section id="page-wrapper">
+
+        <h1>Produkter</h1>        
+        <ul id="products">
+
+            <% products.forEach(product => { %> 
+                <li class="product-container"><a href="/product/<%= product.id %>">
+                    <img class="product-image" src="<%= product.img_src %>">
+                
+                    <h1 class="product-name"><%= product.name %></h1>
+                    <p class="product-price"><%= product.price %>,-</p>
+
+                    <small class="product-id"><%= product.id %></small>
+                </a></li>
+            <% }) %> 
+            </ul>
+    </section>
+</body>
+</html>

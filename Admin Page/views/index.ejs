@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Webshop - Admin</title>
+
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+    <header id="navigation">
+
+    </header>
+    <section id="new-product__container">
+        <form id="new-product__form" method="POST" action="/addProduct">
+
+            <div id="new-product__form--information">
+                <div class="new-product__form--information-container">
+                    <label for="productName">Navn</label><br>
+                    <input id="new-product__name" name="productName" type="text" placeholder="Produkt Navn">
+                </div>
+    
+                <div class="new-product__form--information-container">
+                    <label for="productDescription">Beskrivelse</label><br>
+                    <textarea id ="new-product__description" name="productDescription" type="text" placeholder="Produkt Beskrivelse"></textarea>
+                </div>
+
+                <div class="new-product__form--information-container">
+                    <label for="productPrice">Pris</label><br>
+                    <input id="new-product__price" name="productPrice" type="number" placeholder="Pris" min="1" step="any">
+                </div>
+            </div>
+            
+
+            <label for="productImage">Billede</label>
+            <input id="new-product__image" name="productImage" type="image" value="Tilføj billede">
+            <br>
+
+            <input id="new-product__submit" type="submit" value="Tilføj">
+        </form>
+    </section>
+</body>
+</html>
