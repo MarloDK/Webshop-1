@@ -15,7 +15,7 @@ app.use(express.static(__dirname + '/public'))
 const mongoose = require('mongoose')
 const product = require('./models/product')
 
-mongoose.connect('mongodb+srv://WebshopProject:TestPassword@webshop.d9cpx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
+mongoose.connect('mongodb://127.0.0.1/testWebShop', {
     useNewUrlParser: true, useUnifiedTopology: true
 })
 

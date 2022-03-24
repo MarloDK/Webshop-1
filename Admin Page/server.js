@@ -15,9 +15,11 @@ app.use(express.static(__dirname + '/public'))
 const mongoose = require('mongoose')
 const product = require('../User Page/models/product')
 
-mongoose.connect('mongodb+srv://WebshopProject:TestPassword@webshop.d9cpx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
+mongoose.connect('mongodb://127.0.0.1/testWebShop', {
     useNewUrlParser: true, useUnifiedTopology: true
 })
+.then(()=>console.log('connected'))
+.catch(e=>console.log(e));
 
 app.get('/', (req, res) => {
     res.render('index')
