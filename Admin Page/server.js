@@ -15,7 +15,7 @@ app.use(express.static(__dirname + '/public'))
 const mongoose = require('mongoose')
 const product = require('../User Page/models/product')
 
-mongoose.connect('mongodb://127.0.0.1/testWebShop', {
+mongoose.connect('mongodb+srv://WebshopProject:TestPassword@webshop.d9cpx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
     useNewUrlParser: true, useUnifiedTopology: true
 })
 
@@ -38,7 +38,7 @@ app.post('/addProduct', async (req, res) => {
             id: amountOfProducts + 1,
             name: productName,
             price: productPrice,
-            img_src: "",
+            img_src: "https://via.placeholder.com/250/",
             description: productDescription
         })
 
