@@ -14,7 +14,7 @@ app.use(express.static(__dirname + "/public"));
 //#endregion
 
 const mongoose = require("mongoose");
-const product = require("./models/product");
+const Product = require("./models/product");
 
 mongoose.connect("mongodb://127.0.0.1/testWebShop", {
   useNewUrlParser: true,
@@ -22,12 +22,12 @@ mongoose.connect("mongodb://127.0.0.1/testWebShop", {
 });
 
 app.get("/products", async (req, res) => {
-  const allProducts = await product.find();
+  const allProducts = await Product.find();
   res.render("products", { products: allProducts });
 });
 
 app.get("/product/:productId", (req, res) => {
-  const foundProduct = product.findOne({ id: req.params.productId });
+  const foundProduct = Product.findOne({ id: req.params.productId });
   res.render("product", { product: foundProduct });
 });
 
